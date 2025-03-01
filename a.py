@@ -23,6 +23,7 @@ music_thread = None   # added global music thread variable
 scheduled_prayer_times = []  # List of tuples like [(prayer_name, prayer_datetime), ...]
 
 # 3. Initialize pygame mixer
+pygame.mixer.pre_init(44100, -16, 2, 4096)  # (Frequency, Size, Channels, Buffer)
 pygame.mixer.init()
 
 def fetch_prayer_times():
